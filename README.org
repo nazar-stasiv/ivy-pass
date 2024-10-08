@@ -3,6 +3,14 @@
 ** Quick start
 Install, configure and initialize pass according to https://www.passwordstore.org/
 
+Clone project into =source-dir= and configure =init.el=
+
+#+begin_src elisp
+(use-package ivy-pass
+  :ensure password-store-otp
+  :load-path "source-dir")
+#+end_src
+
 Run =M-x ivy-pass=
 
 The default action is to copy the password to the kill ring.
