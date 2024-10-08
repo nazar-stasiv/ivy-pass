@@ -29,6 +29,7 @@
 ;;; Code:
 (require 'ivy)
 (require 'password-store)
+(require 'password-store-otp)
 
 (defvar ivy-pass-map (make-sparse-keymap))
 
@@ -46,6 +47,9 @@
    ("r"
     ivy-pass--rename-action
     "rename")
+   ("t"
+    ivy-pass--copy-otp-token-action
+    "otp")
    ("g"
     ivy-pass--generate-action
     "generate")))
@@ -80,6 +84,10 @@ Default PASSWORD-LENGTH is ‘password-store-password-length’."
 (defun ivy-pass--password-action (key)
   "Add password for KEY to kill ring."
   (password-store-copy key))
+
+(defun ivy-pass--copy-otp-token-action (key)
+  "Copy password otp for KEY to kill ring."
+  (password-store-otp-token-copy key))
 
 ;;;###autoload
 (defun ivy-pass ()
