@@ -1,9 +1,11 @@
 * ivy-pass
 #+html: <p align="center"><img src="https://melpa.org/packages/ivy-pass-badge.svg" /></p>
 ** Quick start
-Install, configure and initialize pass according to https://www.passwordstore.org/
+Install,    configure    and     initialize    pass    according    to
+https://www.passwordstore.org/
 
-Clone project into =source-dir= and configure =init.el=
+For  OTP get  =otp.bash= from  [[https://github.com/tadfisher/pass-otp/][@tadfisher]]  and put  it into  =.extensions=
+directory. Clone project into =source-dir= and configure =init.el=
 
 #+begin_src elisp
 (use-package ivy-pass
