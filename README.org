@@ -1,11 +1,13 @@
 * ivy-pass
 #+html: <p align="center"><img src="https://melpa.org/packages/ivy-pass-badge.svg" /></p>
 ** Quick start
-Install,    configure    and     initialize    pass    according    to
-https://www.passwordstore.org/
 
-For  OTP get  =otp.bash= from  [[https://github.com/tadfisher/pass-otp/][@tadfisher]]  and put  it into  =.extensions=
-directory. Clone project into =source-dir= and configure =init.el=
+Install,    configure    and     initialize    =pass=    according    to
+https://www.passwordstore.org/.  For =pass otp=  you'll need [[https://github.com/tadfisher/pass-otp/][otp.bash]] in
+=.extensions= directory.
+
+To  use  =ivy= as  =pass=  frontend,  clone  project into  =source-dir=  and
+configure =init.el=
 
 #+begin_src elisp
 (use-package ivy-pass
@@ -13,9 +15,8 @@ directory. Clone project into =source-dir= and configure =init.el=
   :load-path "source-dir")
 #+end_src
 
-Run =M-x ivy-pass=
-
-The default action is to copy the password to the kill ring.
+evaluate, and  run =M-x  ivy-pass=. The  default action  is to  copy the
+password to the kill ring.
 
 ** Other actions (accessible with =M-o=):
 - edit an entry (=e=)
